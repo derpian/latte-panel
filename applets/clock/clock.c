@@ -1392,7 +1392,7 @@ create_clock_widget (ClockData *cd)
         /* Main label for time display */
         cd->clockw = create_main_clock_label (cd);
         gtk_box_pack_start (GTK_BOX (cd->main_obox), cd->clockw, FALSE, FALSE, 0);
-        gtk_style_context_add_class(cd->clockw, "mate-clock");
+        gtk_style_context_add_class(gtk_widget_get_style_context(GTK_WIDGET(cd->clockw)), "latte-clock");
         gtk_widget_show (cd->clockw);
 
         /* Done! */
